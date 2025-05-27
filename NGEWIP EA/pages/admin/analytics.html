@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics - Admin Panel</title>
+  <link rel="stylesheet" href="../../assets/css/admin.css" />
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="../../assets/images/logo.png" class="logo" alt="Logo" />
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="analytics.html" class="active">Analytics</a>
+        <a href="../index.html">Kembali ke Beranda</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Analytics</h1>
+        <p>Statistik performa dan pertumbuhan pengguna platform.</p>
+      </header>
+
+      <!-- Simulasi Chart -->
+      <section class="chart-section">
+        <div class="fake-chart">
+          <h3>Grafik Pendaftaran Siswa</h3>
+          <canvas id="signupChart" width="400" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../assets/js/admin.js"></script>
+</body>
+</html>

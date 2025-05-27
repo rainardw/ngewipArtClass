@@ -1,0 +1,63 @@
+<!-- program.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Kursus</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="../assets/images/logo.png" alt="Logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="program.html">Program Kursus</a></li>
+      <li><a href="artikel.html">Artikel</a></li>
+      <li><a href="biaya.html">Biaya & Pendaftaran</a></li>
+    </ul>
+  </nav>
+ <section id="program-kursus">
+  <h2>Program Kursus Seni</h2>
+
+  <label for="kelas">Pilih Jenis Kelas:</label>
+  <select id="kelas" onchange="updateHarga()">
+    <option value="online">Online</option>
+    <option value="offline">Offline</option>
+  </select>
+
+  <div class="program-container">
+    <div class="program-card">
+      <h3>Digital Art</h3>
+      <p>Menggambar dengan tablet grafis dan software digital.</p>
+      <p class="harga" data-online="300.000" data-offline="500.000">Harga: Rp <span>300.000</span></p>
+    </div>
+
+    <div class="program-card">
+      <h3>Lukis Tradisional</h3>
+      <p>Belajar melukis dengan cat air, akrilik, dan media konvensional.</p>
+      <p class="harga" data-online="250.000" data-offline="450.000">Harga: Rp <span>250.000</span></p>
+    </div>
+
+    <div class="program-card">
+      <h3>Ilustrasi Komik</h3>
+      <p>Teknik menggambar karakter dan membuat panel cerita.</p>
+      <p class="harga" data-online="280.000" data-offline="480.000">Harga: Rp <span>280.000</span></p>
+    </div>
+
+    <div class="program-card">
+      <h3>Desain Karakter</h3>
+      <p>Mengembangkan style dan bentuk karakter unik.</p>
+      <p class="harga" data-online="270.000" data-offline="470.000">Harga: Rp <span>270.000</span></p>
+    </div>
+
+    <div class="program-card">
+      <h3>Seni Sketsa</h3>
+      <p>Dasar membuat sketsa benda, wajah, dan ekspresi.</p>
+      <p class="harga" data-online="220.000" data-offline="400.000">Harga: Rp <span>220.000</span></p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
