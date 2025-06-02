@@ -1,0 +1,73 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'member') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Siswa</title>
+  <link rel="stylesheet" href="../../assets/css/student.css" />
+</head>
+<body>
+    <script>
+  const role = sessionStorage.getItem('userRole');
+  if (role !== 'student') {
+    alert('Kamu harus login sebagai siswa dulu!');
+    window.location.href = '../../login.html';
+  }
+</script>
+<button id="logoutBtn" style="position: fixed; top: 10px; right: 10px; padding: 8px 12px; cursor:pointer;">Logout</button>
+
+<script>
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    sessionStorage.clear();
+    window.location.href = '../../login.html';
+  });
+</script>
+  <div class="student-container">
+    <!--  Sidebar -->
+    <aside class="sidebar">
+      <img src="../../assets/images/logo.png" class="logo" alt="Logo" />
+      <h2>Siswa Panel</h2>
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="course.html">Kursus Saya</a>
+        <a href="../../pages/index.html">Kembali ke Beranda</a>
+      </nav>
+    </aside>
+
+    <!--  Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Hai, Selamat Belajar!</h1>
+        <p>Lihat progres dan kelas kamu di sini ya.</p>
+      </header>
+
+      <section class="student-progress">
+        <div class="progress-card">
+          <h3>Sketching Dasar</h3>
+          <progress value="70" max="100"></progress>
+          <p>70% Selesai</p>
+        </div>
+        <div class="progress-card">
+          <h3>Mewarnai Digital</h3>
+          <progress value="40" max="100"></progress>
+          <p>40% Selesai</p>
+        </div>
+        <div class="progress-card">
+          <h3>Live Class: Karakter</h3>
+          <p><strong>Jam 16:00 WIB - Zoom</strong></p>
+          <a href="https://zoom.us/karakter" class="join-btn" target="_blank">Gabung Sekarang</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

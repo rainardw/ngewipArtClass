@@ -1,0 +1,59 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - ngeWIP ArtClass</title>
+  <link rel="stylesheet" href="../../assets/css/admin.css" />
+</head>
+<body>
+    <script>
+  const role = sessionStorage.getItem('userRole');
+  if (role !== 'admin') {
+    alert('Kamu harus login sebagai admin dulu!');
+    window.location.href = '../../login.html';
+  }
+</script>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <img src="../../assets/images/logo.png" class="logo" alt="Logo" />
+      <h2>Admin Panel</h2>
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="../index.html">Kembali ke Beranda</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>Dashboard Admin</h1>
+        <p>Selamat datang, Admin! Ini adalah ringkasan sistem ngeWIP ArtClass.</p>
+      </header>
+
+      <section class="stats">
+        <div class="stat-card">
+          <h3>120</h3>
+          <p>Jumlah Murid</p>
+        </div>
+        <div class="stat-card">
+          <h3>15</h3>
+          <p>Mentor Aktif</p>
+        </div>
+        <div class="stat-card">
+          <h3>45</h3>
+          <p>Kelas Tersedia</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -207,7 +207,7 @@ footer {
 }
 
 .login-container input {
-  width: 100%;
+  width: 90%;
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -357,3 +357,52 @@ footer {
 .artikel-card a:hover {
   color: #fff;
 }
+
+
+/* style sign up */
+/* body {
+  background: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.signup-box {
+  background: #1c1c1c;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffccaa;
+  width: 320px;
+  text-align: center;
+}
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+}
+button {
+  background: #00ffcc;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #00e6b2;
+}
+.error-msg {
+  color: #ff6666;
+  font-weight: bold;
+  display: none;
+  margin-top: 10px;
+}
+.success-msg {
+  color: #66ff99;
+  font-weight: bold;
+  display: none;
+  margin-top: 10px;
+} */
