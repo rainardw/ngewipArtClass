@@ -90,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Login - ngeWIP ArtClass</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
+<script src="../assets/js/script.js"></script>
 <body class="login-body">
   <div class="login-container">
     <img src="../assets/images/logo.png" alt="Logo" class="login-logo" style="max-width: 120px; margin-bottom: 20px;" />

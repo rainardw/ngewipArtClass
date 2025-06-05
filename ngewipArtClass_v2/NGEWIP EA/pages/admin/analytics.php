@@ -19,10 +19,13 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       <img src="../../assets/images/logo.png" class="logo" alt="Logo" />
       <h2>Admin Panel</h2>
       <nav>
-        <a href="dashboard.php">Dashboard</a>
+      <a href="dashboard.php" >Dashboard</a>
         <a href="analytics.php" class="active">Analytics</a>
-        <a href="kelola_kursus.php" >Kelola Kursus</a>
-        <a href="verifikasi_pembayaran.php">verifikasi_pembayaran</a>
+        <a href="kelola_kursus.php">Kelola Kursus</a>
+        <a href="verifikasi_pembayaran.php">Verifikasi Pembayaran</a>
+        <a href="kelola_member.php">Kelola Member</a>
+        <a href="kelola_mentor.php">Kelola mentor</a>
+        <a href="kelola_karya_seni.php">Kelola Karya Seni Member</a>
         <a href="../../guest/index.php">Kembali ke Beranda</a>
         <a href="../../guest/logout.php">Logout</a>
       </nav>

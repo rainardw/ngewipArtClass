@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .login-link:hover { color: #00ffcc; }
   </style>
 </head>
+<script src="../assets/js/script.js"></script>
 <body>
   <div class="signup-box">
     <h2>Daftar Akun Baru</h2>

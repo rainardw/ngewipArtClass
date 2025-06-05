@@ -221,6 +221,7 @@ if (isset($_REQUEST['id_kelas_pilihan'])) { // Bisa dari GET atau POST
         <a href="live-class.php">Live Class</a>
         <a href="lihat_murid.php">Lihat Murid</a>
         <a href="kelola_materi_saya.php" class="active">Kelola Materi Saya</a>
+        <a href="../../pages/galery_karya.php">Galery Karya</a>
         <a href="../../guest/index.php">Kembali ke Beranda</a>
         <a href="../../guest/logout.php">Logout</a>
       </nav>

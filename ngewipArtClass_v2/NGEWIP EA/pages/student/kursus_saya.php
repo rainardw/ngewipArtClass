@@ -10,7 +10,15 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
 $id_member = $_SESSION['user_id'];
 $kursus_terdaftar = [];
 
-$query = "SELECT ks.id_kelas, ks.nama_kelas, ks.deskripsi_singkat, ks.path_gambar, pk.tipe_yang_dipilih, pk.status_pendaftaran, pk.tanggal_pendaftaran
+$query = "SELECT 
+            pk.id_pendaftaran,
+            ks.id_kelas, 
+            ks.nama_kelas, 
+            ks.deskripsi_singkat, 
+            ks.path_gambar, 
+            pk.tipe_yang_dipilih, 
+            pk.status_pendaftaran, 
+            pk.tanggal_pendaftaran
           FROM pendaftaran_kursus pk
           JOIN kelas_seni ks ON pk.id_kelas = ks.id_kelas
           WHERE pk.id_member = ?
@@ -34,8 +42,8 @@ mysqli_stmt_close($stmt);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kursus Saya - ngeWIP ArtClass</title>
-  <link rel="stylesheet" href="../../assets/css/student.css" /> <style>
-    /* CSS dari course.html bisa dipindahkan ke student.css jika belum */
+  <link rel="stylesheet" href="../../assets/css/student.css" />
+  <style>
     .course-list { display: grid; gap: 20px; margin-top: 30px; }
     .course-card { display: flex; background: #202020; border-radius: 10px; overflow: hidden; border-left: 6px solid #00ffcc; box-shadow: 0 0 10px rgba(0,255,204,0.08); transition: transform 0.3s ease; }
     .course-card:hover { transform: translateY(-5px); }
@@ -75,14 +83,18 @@ mysqli_stmt_close($stmt);
       <section class="course-list">
         <?php if (!empty($kursus_terdaftar)): ?>
             <?php foreach ($kursus_terdaftar as $kursus): ?>
+                <?php
+                  $gambar = !empty($kursus['path_gambar']) ? $kursus['path_gambar'] : 'assets/images/kursus/default.png';
+                  // $status_class = strtolower(str_replace(' ', '-', $kursus['status_pendaftaran']));
+                ?>
                 <div class="course-card">
-                    <img src="../../<?= htmlspecialchars(!empty($kursus['path_gambar']) ? $kursus['path_gambar'] : 'assets/images/kursus/default.png'); ?>" alt="<?= htmlspecialchars($kursus['nama_kelas']); ?>" />
+                    <img src="../../<?= htmlspecialchars($gambar); ?>" alt="<?= htmlspecialchars($kursus['nama_kelas']); ?>" />
                     <div class="course-info">
                         <h3><?= htmlspecialchars($kursus['nama_kelas']); ?> (<?= htmlspecialchars($kursus['tipe_yang_dipilih']); ?>)</h3>
                         <p><?= htmlspecialchars($kursus['deskripsi_singkat'] ?? 'Tidak ada deskripsi singkat.'); ?></p>
                         <p>Tanggal Daftar: <?= htmlspecialchars(date('d M Y, H:i', strtotime($kursus['tanggal_pendaftaran']))); ?></p>
-                        <p>Status: <span class="status <?= strtolower(str_replace(' ', '-', $kursus['status_pendaftaran'])); ?>"><?= htmlspecialchars($kursus['status_pendaftaran']); ?></span></p>
-                        
+                        <p>Status: <span class="status <?= $status_class; ?>"><?= htmlspecialchars($kursus['status_pendaftaran']); ?></span></p>
+
                         <?php if ($kursus['status_pendaftaran'] == 'Menunggu Pembayaran'): ?>
                             <a href="../pembayaran.php?id_pendaftaran=<?= $kursus['id_pendaftaran']; ?>" class="payment-btn">Lakukan Pembayaran</a>
                         <?php elseif ($kursus['status_pendaftaran'] == 'Aktif'): ?>
@@ -97,6 +109,5 @@ mysqli_stmt_close($stmt);
       </section>
     </main>
   </div>
-
 </body>
 </html>
