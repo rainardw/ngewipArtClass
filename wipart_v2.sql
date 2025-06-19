@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2025 at 01:28 AM
+-- Generation Time: Jun 19, 2025 at 11:29 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,8 +40,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `email`, `password`, `role`) VALUES
-('A001', 'adminutama', 'admin@wipart.com', 'admin123', 'admin'),
-('A002', 'superadmin', 'super@wipart.com', 'superpass', 'admin');
+('A001', 'Aditya Atomic', 'admin@wipart.com', 'admin123', 'admin'),
+('A002', 'Rania Super', 'super@wipart.com', 'superpass', 'admin');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,8 @@ CREATE TABLE `karya_seni` (
 
 INSERT INTO `karya_seni` (`id_karya`, `id_member`, `judul_karya`, `deskripsi_karya`, `path_file_karya`, `tanggal_upload`, `id_kelas_terkait`) VALUES
 (1, 1, 'Kapten Mugiwara', '', 'assets/images/karya_member/1749076969_84eff2db52a41c2b433a89b1598378d7.png', '2025-06-04 22:42:49', 'KS001'),
-(2, 3, 'Samurai Dragon Punk', '', 'assets/images/karya_member/1749077695_desktop-394782.jpg', '2025-06-04 22:54:55', NULL);
+(2, 3, 'Samurai Dragon Punk', '', 'assets/images/karya_member/1749077695_desktop-394782.jpg', '2025-06-04 22:54:55', NULL),
+(4, 5, 'rania habis gambar', '', 'assets/images/karya_member/1749098105_Screenshot (868).png', '2025-06-05 04:35:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -90,6 +91,7 @@ CREATE TABLE `kelas_seni` (
 --
 
 INSERT INTO `kelas_seni` (`id_kelas`, `nama_kelas`, `deskripsi_singkat`, `deskripsi_lengkap`, `path_gambar`, `harga_online`, `harga_offline`, `tipe_kelas_tersedia`, `id_mentor`) VALUES
+('33', 'anatomi hewan', 'menggambar hewan', 'hjsgyjdyuyg', 'assets/images/kursus/default.png', 1000000.00, NULL, 'Online', 'M003'),
 ('42', 'Gambar Kuno', 'merupakan kelas yang mempelajari cara menggambar jaman prasejarah', '', 'assets/images/kursus/default.png', 375000.00, NULL, 'Online', 'M002'),
 ('KS001', 'Dasar Menggambar Digital', 'Pelajari dasar-dasar menggambar menggunakan tablet dan software digital.', 'Kursus komprehensif untuk pemula yang ingin menguasai alat dan teknik dasar dalam seni digital, termasuk pengenalan software, penggunaan layer, brush, dan pewarnaan dasar.', 'assets/images/kursus/digital_art.jpg', 250000.00, 450000.00, 'Online,Offline', 'M001'),
 ('KS002', 'Teknik Melukis Cat Air', 'Kuasai teknik melukis cat air dari dasar hingga lanjutan.', 'Dalam kursus ini, Anda akan belajar berbagai teknik cat air, mulai dari wet-on-wet, dry brush, glazing, hingga menciptakan tekstur dan kedalaman pada lukisan Anda.', 'assets/images/kursus/watercolor.jpg', 200000.00, 400000.00, 'Offline', 'M002'),
@@ -123,7 +125,8 @@ INSERT INTO `materi_pelajaran` (`id_materi`, `id_kelas`, `judul_materi`, `deskri
 (3, 'KS001', 'Penggunaan Brush Dasar', 'Eksplorasi berbagai jenis brush dan pengaturannya.', 'Brush hardness, size, opacity, flow, dan blending mode.', 'Teks', 3, '2025-06-04 19:31:05'),
 (4, 'KS001', 'Latihan Garis dan Bentuk', 'Latihan dasar untuk melatih kontrol tangan dan membuat bentuk dasar.', 'assets/materi/KS001_Latihan_Garis.pdf', 'File', 4, '2025-06-04 19:31:05'),
 (5, 'KS002', 'Pengenalan Cat Air dan Kuas', 'Memilih cat air dan kuas yang tepat untuk pemula.', 'Jenis-jenis cat air (tube, pan), jenis kuas (round, flat, mop), dan kertas cat air.', 'Teks', 1, '2025-06-04 19:31:05'),
-(6, 'KS002', 'Teknik Basah di Atas Basah (Wet-on-Wet)', 'Mempelajari efek cat air yang mengalir dengan teknik wet-on-wet.', 'Konten video atau teks detail...', 'Teks', 2, '2025-06-04 19:31:05');
+(6, 'KS002', 'Teknik Basah di Atas Basah (Wet-on-Wet)', 'Mempelajari efek cat air yang mengalir dengan teknik wet-on-wet.', 'Konten video atau teks detail...', 'Teks', 2, '2025-06-04 19:31:05'),
+(7, 'KS001', 'menggambar peta', '', 'assets/materi/1749098523_Logo Atomic.jpg', 'File', 1, '2025-06-05 04:42:03');
 
 -- --------------------------------------------------------
 
@@ -143,9 +146,11 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `username`, `email`, `password`) VALUES
-(1, 'BudiSeni', 'budi@example.com', 'memberBudiPass'),
-(2, 'CitraArt', 'citra@example.com', 'memberCitraPass'),
-(3, 'DewiLukis', 'dewi@example.com', 'memberDewiPass');
+(1, 'WicakSini', 'wicak@gmail.com', 'memberWicakPass'),
+(2, 'Ali Lotim', 'ali@gmail.com', 'memberAliPass'),
+(3, 'Tegar Nagabonar', 'tegar@gmail.com', 'memberTegarPass'),
+(4, 'Reksa Gondrong', 'rek@gmail.com', 'memberRek'),
+(5, 'Rania buah naga', 'naga123@gmail.com', 'ranianaga');
 
 -- --------------------------------------------------------
 
@@ -165,9 +170,9 @@ CREATE TABLE `mentor` (
 --
 
 INSERT INTO `mentor` (`id_mentor`, `username`, `email`, `password`) VALUES
-('M001', 'AndiGuru', 'andi.mentor@wipart.com', 'mentorAndiPass'),
-('M002', 'RinaSensei', 'rina.mentor@wipart.com', 'mentorRinaPass'),
-('M003', 'EkoMaster', 'eko.mentor@wipart.com', 'mentorEkoPass');
+('M001', 'Dzaka Shifu', 'dzakamentor@wipart.com', 'mentorZakaPass'),
+('M002', 'YogaSensei', 'yogamentor@wipart.com', 'mentorYogaPass'),
+('M003', 'Rafi Raja Kera', 'rafimentor@wipart.com', 'mentorRafiPass');
 
 -- --------------------------------------------------------
 
@@ -221,7 +226,10 @@ INSERT INTO `pendaftaran_kursus` (`id_pendaftaran`, `id_member`, `id_kelas`, `ti
 (3, 1, 'KS002', 'Offline', '2025-06-03 09:00:00', 'Menunggu Pembayaran', NULL),
 (4, 2, 'KS001', 'Online', '2025-06-05 02:25:28', 'Menunggu Pembayaran', NULL),
 (5, 3, 'KS004', 'Offline', '2025-06-05 02:37:26', 'Menunggu Pembayaran', NULL),
-(6, 2, 'KS002', 'Offline', '2025-06-05 03:23:04', 'Menunggu Pembayaran', NULL);
+(6, 2, 'KS002', 'Offline', '2025-06-05 03:23:04', 'Menunggu Pembayaran', NULL),
+(7, 1, 'KS003', 'Online', '2025-06-05 10:49:56', 'Menunggu Pembayaran', NULL),
+(8, 5, 'KS004', 'Online', '2025-06-05 12:33:20', 'Menunggu Pembayaran', NULL),
+(9, 5, '33', 'Online', '2025-06-05 12:48:16', 'Aktif', NULL);
 
 --
 -- Indexes for dumped tables
@@ -298,25 +306,25 @@ ALTER TABLE `pendaftaran_kursus`
 -- AUTO_INCREMENT for table `karya_seni`
 --
 ALTER TABLE `karya_seni`
-  MODIFY `id_karya` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_karya` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `materi_pelajaran`
 --
 ALTER TABLE `materi_pelajaran`
-  MODIFY `id_materi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_materi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pendaftaran_kursus`
 --
 ALTER TABLE `pendaftaran_kursus`
-  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
