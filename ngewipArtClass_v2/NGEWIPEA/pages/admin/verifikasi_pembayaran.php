@@ -107,6 +107,7 @@ $hasil_verifikasi = mysqli_query($conn, $query_verifikasi);
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Verifikasi Pembayaran Kursus</h1>
       </header>
 
@@ -185,6 +186,6 @@ window.onclick = function(event) {
         document.getElementById('imageModal').style.display = "none";
     }
 }
-</script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

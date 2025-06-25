@@ -196,6 +196,7 @@ if ($result_mentors) {
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Kelola Program Kursus</h1>
       </header>
 
@@ -313,5 +314,6 @@ if ($result_mentors) {
       </div>
     </main>
   </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

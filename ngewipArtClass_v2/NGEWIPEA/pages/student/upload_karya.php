@@ -126,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_karya'])) {
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Upload Karya Seni Anda</h1>
       </header>
 
@@ -161,5 +162,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_karya'])) {
       </div>
     </main>
   </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

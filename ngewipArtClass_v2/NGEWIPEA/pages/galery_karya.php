@@ -52,6 +52,7 @@ if ($hasil_semua_karya) {
   </style>
 </head>
 <body>
+  <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
   <nav class="navbar">
     <img src="../assets/images/logo.png" alt="Logo" class="logo" />
     <ul class="nav-links">
@@ -123,6 +124,6 @@ if ($hasil_semua_karya) {
             tutupModalGambar();
         }
     }
-  </script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

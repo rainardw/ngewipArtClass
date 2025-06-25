@@ -79,6 +79,7 @@ mysqli_stmt_close($stmt);
       <header>
         <h1>Kursus Saya</h1>
         <p>Berikut daftar kursus yang telah atau sedang Anda ikuti.</p>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
       <section class="course-list">
         <?php if (!empty($kursus_terdaftar)): ?>

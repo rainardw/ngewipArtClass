@@ -29,6 +29,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Analytics</h1>
         <p>Statistik performa dan pertumbuhan pengguna platform.</p>
       </header>
@@ -40,6 +41,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       </section>
     </main>
   </div>
+  <script src="../assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../assets/js/admin.js"></script>
 </body>

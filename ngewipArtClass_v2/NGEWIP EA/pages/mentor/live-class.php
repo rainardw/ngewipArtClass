@@ -32,6 +32,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       <header>
         <h1>Live Class Hari Ini</h1>
         <p>Berikut adalah jadwal kelas live kamu hari ini (data dari JavaScript).</p>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
       <section id="live-class-list" class="live-class-list">
         </section>

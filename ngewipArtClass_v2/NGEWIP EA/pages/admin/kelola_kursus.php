@@ -200,6 +200,7 @@ if ($result_mentors) {
     <main class="main-content">
       <header>
         <h1>Kelola Program Kursus</h1>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
 
       <?= $pesan; // Tampilkan pesan sukses/error ?>

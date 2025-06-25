@@ -130,6 +130,7 @@ if ($hasil_all_mentor) {
   </style>
 </head>
 <body>
+<button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
   <div class="admin-container">
     <aside class="sidebar">
       <img src="../../assets/images/logo.png" class="logo" alt="Logo" />
@@ -195,5 +196,6 @@ if ($hasil_all_mentor) {
       </div>
     </main>
   </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

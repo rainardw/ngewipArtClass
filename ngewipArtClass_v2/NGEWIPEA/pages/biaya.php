@@ -63,6 +63,7 @@ if ($hasil_biaya_kursus && mysqli_num_rows($hasil_biaya_kursus) > 0) {
   </style>
 </head>
 <body>
+  <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
   <nav class="navbar">
     <img src="../assets/images/logo.png" alt="Logo" class="logo">
     <ul class="nav-links">
@@ -116,5 +117,6 @@ if ($hasil_biaya_kursus && mysqli_num_rows($hasil_biaya_kursus) > 0) {
   <footer>
     <p>&copy; <?= date("Y") ?> ngeWIP ArtClass. All rights reserved.</p>
   </footer>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

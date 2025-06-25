@@ -1,9 +1,30 @@
+:root {
+ --bg-color: #f0f8f9;
+  --text-color: #000;
+  --primary-color: #7EACB5;
+  --card-bg: #ffffff;
+  --card-border: #ccc;
+  --nav-bg: #e4f1f2;
+  --footer-color: #444;
+}
+
+.dark-mode {
+  --bg-color: #0e0e0e;
+  --text-color: #ffffff;
+  --primary-color: #00ffcc;
+  --card-bg: #2a2a2a;
+  --card-border: #444;
+  --nav-bg: #111;
+  --footer-color: #666;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
 }
 
 .logo {
@@ -19,7 +40,7 @@ body {
   justify-content: space-between;
   padding: 60px 10%;
   position: relative;
-  background: linear-gradient(120deg, #141e30, #243b55);
+  background: linear-gradient(120deg, var(--bg-color), var(--card-bg));
 }
 
 .hero-content {
@@ -29,12 +50,12 @@ body {
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--footer-color);
 }
 
 .hero-img {
@@ -44,8 +65,8 @@ body {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #00ffcc;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--bg-color);
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -59,14 +80,14 @@ body {
 
 .program-section {
   padding: 60px 10%;
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   text-align: center;
 }
 
 .program-section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .card-container {
@@ -76,8 +97,8 @@ body {
 }
 
 .card {
-  background: #2a2a2a;
-  border: 1px solid #444;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 20px;
   transition: 0.3s ease;
@@ -89,13 +110,13 @@ body {
 }
 
 .card h3 {
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .card a {
   display: inline-block;
   margin-top: 15px;
-  color: #00ffcc;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -103,13 +124,12 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  background: #111;
-  color: #666;
+  background: var(--nav-bg);
+  color: var(--footer-color);
 }
 
-/* Navbar */
 .navbar {
-  background-color: #111;
+  background-color: var(--nav-bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -127,7 +147,7 @@ footer {
   display: none;
   font-size: 26px;
   cursor: pointer;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .navbar .nav-links {
@@ -137,17 +157,16 @@ footer {
 }
 
 .navbar .nav-links li a {
-  color: #ccc;
+  color: var(--footer-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar .nav-links li a:hover {
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
-/* Responsive Breakpoint */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -167,7 +186,7 @@ footer {
     position: absolute;
     top: 70px;
     right: 0;
-    background: #1a1a1a;
+    background: var(--card-bg);
     flex-direction: column;
     width: 100%;
     display: none;
@@ -183,6 +202,7 @@ footer {
   }
 }
 
+/* Login */
 .login-body {
   background: linear-gradient(to right, #f2f2f2, #e0e0e0);
   font-family: Arial, sans-serif;
@@ -238,13 +258,13 @@ footer {
 
 #program-kursus {
   padding: 40px;
-  background-color: #101820;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 #program-kursus h2 {
   text-align: center;
-  color: cyan;
+  color: var(--primary-color);
 }
 
 #kelas {
@@ -263,8 +283,8 @@ footer {
 }
 
 .program-card {
-  background: #1c1c1c;
-  border: 1px solid #333;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 20px;
   width: 250px;
@@ -273,18 +293,18 @@ footer {
 
 .program-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px cyan;
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .program-card h3 {
-  color: #0ff;
+  color: var(--primary-color);
 }
 
 .harga span {
   font-weight: bold;
   color: lightgreen;
 }
-/* Animasi dasar */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -307,16 +327,16 @@ footer {
 .animate:nth-child(4) { animation-delay: 0.4s; }
 .animate:nth-child(5) { animation-delay: 0.5s; }
 
-/* Artikel section */
+/* Artikel */
 #artikel {
   padding: 40px;
-  background-color: #0a0a0a;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 #artikel h2 {
   text-align: center;
-  color: cyan;
+  color: var(--primary-color);
   margin-bottom: 30px;
 }
 
@@ -328,7 +348,7 @@ footer {
 }
 
 .artikel-card {
-  background-color: #1e1e1e;
+  background-color: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
   width: 280px;
@@ -338,24 +358,25 @@ footer {
 
 .artikel-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px cyan;
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 .artikel-card h3 {
-  color: #0ff;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
+
 .artikel-card a {
   display: inline-block;
   margin-top: 10px;
-  color: #0ff;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .artikel-card a:hover {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .status-label {
@@ -369,52 +390,392 @@ footer {
 .status-label.aktif { background: #ddffdd; color: #009900; }
 .status-label.selesai { background: #ddddff; color: #000099; }
 
+/* html.light-mode body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
 
-/* style sign up */
-/* body {
-  background: #121212;
-  color: #eee;
+body.signup-page {
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 20px 0;
 }
+
 .signup-box {
-  background: #1c1c1c;
-  padding: 40px;
+  background: var(--card-bg);
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 0 15px #00ffccaa;
-  width: 320px;
+  box-shadow: 0 0 15px var(--primary-color);
+  width: 100%;
+  max-width: 380px;
   text-align: center;
 }
-input, button {
-  width: 100%;
+
+.signup-box h2 {
+  color: var(--primary-color);
+}
+
+.signup-box input {
+  width: calc(100% - 24px);
   padding: 12px;
   margin: 10px 0;
   border-radius: 6px;
   font-size: 16px;
-  border: none;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
-button {
-  background: #00ffcc;
+
+.signup-box input::placeholder {
+  color: #888;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--bg-color);
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-button:hover {
+
+.signup-box button:hover {
   background: #00e6b2;
 }
-.error-msg {
-  color: #ff6666;
+
+.form-message {
   font-weight: bold;
-  display: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  display: block;
+}
+
+.form-message.error {
+  color: #ff6666;
+  background-color: rgba(255, 102, 102, 0.1);
+}
+
+.login-link {
+  color: #ccc;
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.login-link:hover {
+  color: var(--primary-color);
+}
+
+.kelola_member .form-container {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.kelola_member .form-container h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.kelola_member .form-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.kelola_member .form-container input[type="text"],
+.kelola_member .form-container input[type="email"],
+.kelola_member .form-container input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.kelola_member .form-container button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kelola_member .form-container button:hover {
+  background-color: #00e6b2;
+}
+
+.kelola_member .form-container .cancel-edit {
+  background-color: #777;
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.kelola_member .form-container .cancel-edit:hover {
+  background-color: #555;
+}
+
+.kelola_member .table-container {
+  overflow-x: auto;
+}
+
+.kelola_member table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+.kelola_member table th,
+.kelola_member table td {
+  border: 1px solid var(--card-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.kelola_member table th {
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+}
+
+.kelola_member table td a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.kelola_member .pesan {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.kelola_member .pesan.sukses {
+  background-color: #28a74533;
+  color: #a3ffb8;
+  border: 1px solid #28a74588;
+}
+
+.kelola_member .pesan.error {
+  background-color: #dc354533;
+  color: #ffacb3;
+  border: 1px solid #dc354588;
+}
+.lihat_murid table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: var(--text-color);
+  font-size: 0.9em;
+}
+
+.lihat_murid table th {
+  background-color: var(--card-bg);
+  color: var(--primary-color);
+}
+
+.lihat_murid table th,
+.lihat_murid table td {
+  border: 1px solid var(--card-border);
+  padding: 8px;
+  text-align: left;
+}
+
+.lihat_murid .no-data {
+  text-align: center;
+  color: var(--footer-color);
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+.karya_saya .galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.karya_saya .karya-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.karya_saya .karya-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.karya_saya .karya-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.karya_saya .karya-info h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+.karya_saya .karya-info p {
+  font-size: 0.9em;
+  color: var(--text-color);
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.karya_saya .karya-info .meta-info {
+  font-size: 0.8em;
+  color: var(--footer-color);
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.karya_saya .karya-info .meta-info strong {
+  color: var(--text-secondary);
+}
+
+.karya_saya .karya-card form button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8em;
   margin-top: 10px;
 }
-.success-msg {
-  color: #66ff99;
-  font-weight: bold;
-  display: none;
-  margin-top: 10px;
-} */
 
+.karya_saya .karya-card form button:hover {
+  background-color: #c82333;
+}
+
+.karya_saya .pesan {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.karya_saya .pesan.sukses {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: var(--success-color);
+  border: 1px solid rgba(40, 167, 69, 0.5);
+}
+
+.karya_saya .pesan.error {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: var(--danger-color);
+  border: 1px solid rgba(220, 53, 69, 0.5);
+}
+
+.karya_saya .no-karya {
+  text-align: center;
+  color: var(--footer-color);
+  margin-top: 20px;
+}
+
+.program-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+
+.program-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.program-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.program-card .deskripsi {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.program-card .harga-info {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.program-card .harga-info strong {
+    color: var(--accent-color);
+}
+
+.program-card .mentor-info {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.btn-pilih-kursus {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: var(--accent-color);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.btn-pilih-kursus:hover {
+    background-color: var(--accent-hover);
+}
+
+#program-kursus h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.program-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}

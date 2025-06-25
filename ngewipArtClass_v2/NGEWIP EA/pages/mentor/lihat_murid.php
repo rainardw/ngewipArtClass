@@ -90,6 +90,7 @@ if (!empty($kelas_ids)) {
     <main class="main-content">
       <header>
         <h1>Daftar Murid di Kelas Anda</h1>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
 
       <div class="table-container">

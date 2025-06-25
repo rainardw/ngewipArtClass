@@ -44,6 +44,7 @@ include '../../database/db.php';
       <header>
         <h1>Dashboard Admin</h1>
         <p>Selamat datang, <?= htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?>! Ini adalah ringkasan sistem ngeWIP ArtClass.</p>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
 
       <section class="stats">

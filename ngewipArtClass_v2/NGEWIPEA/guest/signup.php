@@ -85,5 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     <a href="login.php" class="login-link">Sudah punya akun? Login di sini</a>
   </div>
+   <script src="../assets/js/script.js"></script>
 </body>
 </html>

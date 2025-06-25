@@ -30,6 +30,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Selamat Datang, Mentor <?= htmlspecialchars($_SESSION['username'] ?? ''); ?>!</h1>
         <p>Berikut ringkasan aktivitas dan kelas kamu.</p>
       </header>
@@ -73,5 +74,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       </section>
     </main>
   </div>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

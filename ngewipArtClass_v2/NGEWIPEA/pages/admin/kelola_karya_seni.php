@@ -85,6 +85,7 @@ if ($hasil_karya_all) {
   </style>
 </head>
 <body>
+  <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
   <div class="admin-container">
     <aside class="sidebar">
       <img src="../../assets/images/logo.png" class="logo" alt="Logo" />

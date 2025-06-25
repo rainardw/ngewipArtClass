@@ -100,6 +100,7 @@ mysqli_stmt_close($stmt_karya);
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Karya Seni Saya</h1>
       </header>
 
@@ -132,5 +133,6 @@ mysqli_stmt_close($stmt_karya);
       <?php endif; ?>
     </main>
   </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

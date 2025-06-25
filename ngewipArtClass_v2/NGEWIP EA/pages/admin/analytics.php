@@ -34,6 +34,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       <header>
         <h1>Analytics</h1>
         <p>Statistik performa dan pertumbuhan pengguna platform.</p>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
       <section class="chart-section">
         <div class="fake-chart">

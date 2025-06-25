@@ -107,5 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <p style="margin-top: 15px;">Belum punya akun? <a href="signup.php">Daftar di sini</a></p>
     </form>
   </div>
+   <script src="../assets/js/script.js"></script>
 </body>
 </html>

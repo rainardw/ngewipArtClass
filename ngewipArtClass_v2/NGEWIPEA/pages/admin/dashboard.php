@@ -32,6 +32,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Dashboard Admin</h1>
         <p>Selamat datang, <?= htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?>! Ini adalah ringkasan sistem ngeWIP ArtClass.</p>
       </header>
@@ -64,5 +65,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
       </section>
     </main>
   </div>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

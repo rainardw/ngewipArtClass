@@ -77,6 +77,7 @@ mysqli_stmt_close($stmt);
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Kursus Saya</h1>
         <p>Berikut daftar kursus yang telah atau sedang Anda ikuti.</p>
       </header>
@@ -123,5 +124,6 @@ mysqli_stmt_close($stmt);
       </section>
     </main>
   </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

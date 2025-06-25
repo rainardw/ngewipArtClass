@@ -229,6 +229,7 @@ if (isset($_REQUEST['id_kelas_pilihan'])) { // Bisa dari GET atau POST
     <main class="main-content">
       <header>
         <h1>Kelola Materi Kursus Saya</h1>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
 
       <?= $pesan; ?>

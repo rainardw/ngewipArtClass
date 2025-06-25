@@ -121,6 +121,7 @@ $hasil_verifikasi = mysqli_query($conn, $query_verifikasi);
     <main class="main-content">
       <header>
         <h1>Verifikasi Pembayaran Kursus</h1>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
       </header>
 
       <?= $pesan; ?>

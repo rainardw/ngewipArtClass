@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
+    <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
 <div class="container">
     <h2>Upload Bukti Pembayaran</h2>
     <?php if ($pesan): ?>
@@ -85,5 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Upload & Konfirmasi</button>
     </form>
 </div>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

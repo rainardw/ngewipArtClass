@@ -87,6 +87,7 @@ if (!empty($kelas_ids)) {
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Daftar Murid di Kelas Anda</h1>
       </header>
 
@@ -122,5 +123,6 @@ if (!empty($kelas_ids)) {
       </div>
     </main>
   </div>
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>

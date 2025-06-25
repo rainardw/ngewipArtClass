@@ -227,6 +227,7 @@ if (isset($_REQUEST['id_kelas_pilihan'])) { // Bisa dari GET atau POST
     </aside>
     <main class="main-content">
       <header>
+        <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
         <h1>Kelola Materi Kursus Saya</h1>
       </header>
 
@@ -380,6 +381,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 <?php endif; ?>
-</script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

@@ -46,6 +46,8 @@ session_start();
       <?php endif; ?>
     </div>
     <img src="../assets/images/hero-drawing.png" alt="Hero" class="hero-img" />
+    <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
+
   </header>
 
   <footer>
