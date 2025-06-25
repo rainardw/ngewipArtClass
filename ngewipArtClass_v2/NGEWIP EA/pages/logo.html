@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ngewip artclass Logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #201E43, #134B70);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            color: #EEEEEE;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 30px;
+        }
+        
+        .logo-card {
+            background: rgba(32, 30, 67, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(80, 140, 155, 0.3);
+        }
+        
+        .logo {
+            display: inline-block;
+            position: relative;
+            padding: 40px 70px;
+            background-color: #201E43;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            box-shadow: inset 0 0 0 2px #508C9B, 
+                        0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo:hover {
+            transform: translateY(-5px);
+            box-shadow: inset 0 0 0 2px #508C9B, 
+                        0 20px 40px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(145deg, #201E43, #1a1840);
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 800;
+            color: #EEEEEE;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .artclass {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-style: italic;
+            margin-top: -8px;
+            letter-spacing: 3px;
+            color: #508C9B;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .art-icon {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #134B70, #508C9B);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .art-icon:before {
+            content: "✎";
+            font-size: 28px;
+            color: #EEEEEE;
+            transform: rotate(25deg);
+        }
+        
+        .brush-stroke {
+            position: absolute;
+            bottom: 20px;
+            left: 35px;
+            width: 140px;
+            height: 8px;
+            background: linear-gradient(90deg, #134B70, #508C9B);
+            border-radius: 4px;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        
+        .color-scheme {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .color-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .color-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .color-primary {
+            background-color: #201E43;
+        }
+        
+        .color-secondary {
+            background-color: #134B70;
+        }
+        
+        .color-accent1 {
+            background-color: #508C9B;
+        }
+        
+        .color-accent2 {
+            background-color: #EEEEEE;
+            color: #201E43;
+            text-shadow: none;
+        }
+        
+        .logo-details {
+            margin-top: 40px;
+            background: rgba(19, 75, 112, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: left;
+            border: 1px solid rgba(80, 140, 155, 0.2);
+        }
+        
+        .logo-details h2 {
+            color: #EEEEEE;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .logo-details p {
+            color: #d0e4ec;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(32, 30, 67, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(80, 140, 155, 0.2);
+        }
+        
+        .feature h3 {
+            color: #508C9B;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .feature h3:before {
+            content: "✓";
+            background: rgba(80, 140, 155, 0.3);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #EEEEEE;
+        }
+        
+        .usage-examples {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .usage {
+            flex: 1;
+            min-width: 250px;
+            height: 150px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            color: #EEEEEE;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background: #201E43;
+            border: 1px solid #508C9B;
+        }
+        
+        .light-bg {
+            background: linear-gradient(135deg, #201E43, #134B70);
+        }
+        
+        .dark-bg {
+            background: linear-gradient(135deg, #134B70, #508C9B);
+        }
+        
+        .usage .artclass {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            margin-top: -5px;
+            color: #508C9B;
+        }
+        
+        .usage .art-icon {
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(80, 140, 155, 0.3);
+        }
+        
+        .usage .art-icon:before {
+            font-size: 22px;
+        }
+        
+        .usage .brush-stroke {
+            width: 100px;
+            height: 6px;
+            bottom: 15px;
+            left: 25px;
+            opacity: 0.8;
+        }
+        
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 3rem;
+            }
+            
+            .artclass {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                padding: 30px 50px;
+            }
+            
+            .brush-stroke {
+                width: 100px;
+            }
+            
+            .usage {
+                font-size: 1.8rem;
+            }
+            
+            .usage .artclass {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 2.4rem;
+            }
+            
+            .artclass {
+                font-size: 1.2rem;
+            }
+            
+            .logo {
+                padding: 25px 40px;
+            }
+            
+            .art-icon {
+                width: 40px;
+                height: 40px;
+                top: 15px;
+                right: 15px;
+            }
+            
+            .brush-stroke {
+                width: 80px;
+                bottom: 15px;
+                left: 20px;
+            }
+            
+            .color-box {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .usage {
+                min-width: 100%;
+                height: 120px;
+                font-size: 1.6rem;
+            }
+            
+            .usage .artclass {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo-card">
+            <div class="logo">
+                <div class="logo-text">ngewip
+                    <span class="artclass">artclass</span>
+                </div>
+                <div class="art-icon"></div>
+                <div class="brush-stroke"></div>
+            </div>
+            
+            <div class="color-scheme">
+                <div class="color-box color-primary">
+                    #201E43
+                    <span>Primary</span>
+                </div>
+                <div class="color-box color-secondary">
+                    #134B70
+                    <span>Secondary</span>
+                </div>
+                <div class="color-box color-accent1">
+                    #508C9B
+                    <span>Accent</span>
+                </div>
+                <div class="color-box color-accent2">
+                    #EEEEEE
+                    <span>Text</span>
+                </div>
+            </div>
+            
+            <div class="logo-details">
+                <h2>Desain Logo dengan Palet Baru</h2>
+                <p>Logo "ngewip artclass" dengan palet warna baru yang elegan dan modern:</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <h3>Kombinasi Warna Dalam</h3>
+                        <p>Perpaduan warna biru tua dan ungu menciptakan kesan profesional dan kreatif.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Tipografi Modern</h3>
+                        <p>Font "Poppins" tebal memberikan kesan kontemporer yang kuat dan profesional.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Elemen Artistik</h3>
+                        <p>Ikon kuas dan goresan cat menambahkan sentuhan kreatif pada desain minimalis.</p>
+                    </div>
+                </div>
+                
+                <h2 style="margin-top: 30px;">Contoh Penggunaan</h2>
+                <div class="usage-examples">
+                    <div class="usage light-bg">
+                        ngewip
+                        <span class="artclass">artclass</span>
+                        <div class="art-icon"></div>
+                        <div class="brush-stroke"></div>
+                    </div>
+                    <div class="usage dark-bg">
+                        ngewip
+                        <span class="artclass">artclass</span>
+                        <div class="art-icon"></div>
+                        <div class="brush-stroke"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watermark">ngewip artclass © 2023</div>
+    </div>
+</body>
+</html>

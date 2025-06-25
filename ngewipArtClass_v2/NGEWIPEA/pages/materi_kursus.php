@@ -69,6 +69,11 @@ if (isset($_GET['id_kelas'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi Kursus: <?= $nama_kelas_saat_ini; ?> - ngeWIP ArtClass</title>
+    <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/student.css"> <style>
         .container-materi { max-width: 900px; margin: 30px auto; padding: 20px; background-color: #1e1e1e; border-radius: 8px; }

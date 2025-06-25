@@ -56,6 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Upload Bukti Pembayaran</title>
+    <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>

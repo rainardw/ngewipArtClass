@@ -62,14 +62,13 @@ if (!empty($kelas_ids)) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lihat Murid - Mentor ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/mentor.css" />
-  <style>
-    /* Gaya CSS dari kelola_kursus.php bisa digunakan sebagian */
-    .table-container { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; color: #ccc; font-size:0.9em;}
-    table th, table td { border: 1px solid #444; padding: 8px; text-align: left; }
-    table th { background-color: #333; color: #00ffcc; }
-    .no-data { text-align: center; color: #aaa; margin-top: 20px; font-size: 1.1em;}
+  <style><body class="lihat_murid">
   </style>
 </head>
 <body>
@@ -123,6 +122,6 @@ if (!empty($kelas_ids)) {
       </div>
     </main>
   </div>
-  <script src="../assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

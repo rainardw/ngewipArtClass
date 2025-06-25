@@ -65,23 +65,13 @@ mysqli_stmt_close($stmt_karya);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Karya Seni Saya - ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/student.css" />
-  <style>
-    /* Style untuk galeri bisa dipakai di sini juga */
-    .galeri-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px 0; }
-    .karya-card { background-color: #2b2b2b; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; flex-direction: column;}
-    .karya-card img { width: 100%; height: 200px; object-fit: cover; }
-    .karya-info { padding: 15px; flex-grow:1; display:flex; flex-direction:column; }
-    .karya-info h4 { margin-top: 0; margin-bottom: 5px; color: #00ffcc; font-size: 1.1em; }
-    .karya-info p { font-size: 0.9em; color: #ccc; margin-bottom: 3px; line-height:1.4; }
-    .karya-info .meta-info { font-size: 0.8em; color: #888; margin-top:auto; padding-top:10px;}
-    .karya-info .meta-info strong { color: #aaa;}
-    .karya-card form button { background-color: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; margin-top: 10px;}
-    .karya-card form button:hover { background-color: #c82333;}
-    .pesan { padding: 10px; border-radius: 5px; margin-bottom: 15px; text-align:center; }
-    .pesan.sukses { background-color: #28a74533; color: #a3ffb8; border: 1px solid #28a74588; }
-    .pesan.error { background-color: #dc354533; color: #ffacb3; border: 1px solid #dc354588; }
-    .no-karya {text-align: center; color:#aaa; margin-top:20px;}
+  <style><body class="karya_saya">
   </style>
 </head>
 <body>

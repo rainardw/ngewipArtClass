@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #eee;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .mentor-container {
@@ -12,7 +12,7 @@ body {
 
 .sidebar {
   width: 250px;
-  background: #1c1c1c;
+  background: var(--card-bg);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ body {
 }
 
 .sidebar h2 {
-  color: #00ffcc;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .sidebar nav a {
   text-decoration: none;
-  color: #ccc;
+  color: var(--text-color);
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -46,8 +46,8 @@ body {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-  background-color: #00ffcc;
-  color: #000;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
 
 .main-content {
@@ -57,11 +57,11 @@ body {
 
 .main-content header h1 {
   font-size: 2rem;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .main-content header p {
-  color: #aaa;
+  color: var(--text-color);
 }
 
 .mentor-stats {
@@ -72,11 +72,11 @@ body {
 }
 
 .stat-card {
-  background: #2b2b2b;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  border: 1px solid #444;
+  border: 1px solid var(--card-border);
   transition: transform 0.3s;
 }
 
@@ -87,12 +87,12 @@ body {
 
 .stat-card h3 {
   font-size: 2.5rem;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .stat-card p {
   margin-top: 10px;
-  color: #ccc;
+  color: var(--text-color);
 }
 
 /* Responsive */
@@ -113,9 +113,9 @@ body {
 }
 
 .live-class-card {
-  background: #202020;
-  border: 1px solid #333;
-  border-left: 6px solid #00ffcc;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 6px solid var(--primary-color);
   padding: 20px;
   border-radius: 10px;
   transition: 0.3s ease;
@@ -128,19 +128,19 @@ body {
 
 .live-class-card h3 {
   margin: 0 0 10px;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .live-class-card p {
   margin: 5px 0;
-  color: #ccc;
+  color: var(--text-color);
 }
 
 .live-class-card .join-btn {
   margin-top: 10px;
   display: inline-block;
-  background: #00ffcc;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--bg-color);
   padding: 10px 16px;
   border-radius: 6px;
   font-weight: bold;

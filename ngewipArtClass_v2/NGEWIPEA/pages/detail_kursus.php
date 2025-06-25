@@ -122,6 +122,11 @@ if (isset($_SESSION['kursus_ingin_didaftar_id']) && $_SESSION['kursus_ingin_dida
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Kursus: <?= htmlspecialchars($kursus['nama_kelas'] ?? 'Tidak Ditemukan'); ?> - ngeWIP ArtClass</title>
+    <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
     <link rel="stylesheet" href="../assets/css/style.css"> <style>
         .container-detail { max-width: 800px; margin: 30px auto; padding: 20px; background-color: #1e1e1e; border-radius: 8px; }
         .container-detail img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 4px; margin-bottom: 20px; }

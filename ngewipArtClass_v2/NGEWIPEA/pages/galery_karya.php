@@ -28,6 +28,11 @@ if ($hasil_semua_karya) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeri Karya Seni - ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
     /* Style mirip dengan karya_saya.php, bisa disatukan di style.css nanti */

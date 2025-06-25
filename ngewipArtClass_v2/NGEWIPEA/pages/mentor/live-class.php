@@ -11,6 +11,11 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Live Class - Mentor ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/mentor.css" />
 </head>
 <body>
@@ -37,6 +42,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
     </main>
   </div>
   <script src="../assets/js/script.js"></script>
-  <script src="../../assets/js/mentor.js"></script> 
+  <script src="../assets/js/mentor.js"></script> 
   </body>
 </html>

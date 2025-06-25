@@ -40,6 +40,11 @@ mysqli_stmt_close($stmt);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kursus Saya - ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/student.css" /> 
   <style>
     .course-list { display: grid; gap: 20px; margin-top: 30px; }

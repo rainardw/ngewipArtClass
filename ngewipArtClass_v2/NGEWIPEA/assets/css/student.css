@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #eee;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .student-container {
@@ -12,7 +12,7 @@ body {
 
 .sidebar {
   width: 250px;
-  background: #1c1c1c;
+  background: var(--card-bg);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ body {
 }
 
 .sidebar h2 {
-  color: #00ffcc;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .sidebar nav a {
   text-decoration: none;
-  color: #ccc;
+  color: var(--text-color);
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -46,8 +46,8 @@ body {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-  background-color: #00ffcc;
-  color: #000;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
 
 .main-content {
@@ -57,11 +57,11 @@ body {
 
 .main-content header h1 {
   font-size: 2rem;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .main-content header p {
-  color: #aaa;
+  color: var(--text-color);
 }
 
 .student-progress {
@@ -72,16 +72,16 @@ body {
 }
 
 .progress-card {
-  background: #2b2b2b;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
-  border-left: 5px solid #00ffcc;
+  border-left: 5px solid var(--primary-color);
   box-shadow: 0 0 10px rgba(0,255,204,0.1);
 }
 
 .progress-card h3 {
   margin-top: 0;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .progress-card progress {
@@ -92,14 +92,14 @@ body {
 
 .progress-card p {
   margin-top: 8px;
-  color: #ccc;
+  color: var(--text-color);
 }
 
 .join-btn {
   display: inline-block;
   margin-top: 12px;
-  background: #00ffcc;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--bg-color);
   padding: 10px 16px;
   border-radius: 6px;
   font-weight: bold;
@@ -130,10 +130,10 @@ body {
 
 .course-card {
   display: flex;
-  background: #202020;
+  background: var(--card-bg);
   border-radius: 10px;
   overflow: hidden;
-  border-left: 6px solid #00ffcc;
+  border-left: 6px solid var(--primary-color);
   box-shadow: 0 0 10px rgba(0,255,204,0.08);
   transition: transform 0.3s ease;
 }
@@ -153,17 +153,17 @@ body {
 
 .course-info h3 {
   margin-top: 0;
-  color: #00ffcc;
+  color: var(--primary-color);
 }
 
 .course-info p {
-  color: #ccc;
+  color: var(--text-color);
   margin: 10px 0;
 }
 
 .start-btn {
-  background: #00ffcc;
-  color: #000;
+  background: var(--primary-color);
+  color: var(--bg-color);
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;

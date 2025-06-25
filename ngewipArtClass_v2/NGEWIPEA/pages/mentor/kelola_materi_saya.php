@@ -182,33 +182,13 @@ if (isset($_REQUEST['id_kelas_pilihan'])) { // Bisa dari GET atau POST
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kelola Materi Kursus Saya - Mentor</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/mentor.css" />
-  <style>
-    /* Anda bisa menggunakan beberapa style dari admin.css atau buat style khusus */
-    .main-content { padding: 20px; }
-    .form-section, .list-section { background-color: #2b2b2b; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-    h3, h4 { color: #00ffcc; }
-    label { display: block; margin-bottom: 5px; color: #ccc; }
-    input[type="text"], input[type="number"], textarea, select, input[type="file"] {
-        width: calc(100% - 22px); padding: 10px; margin-bottom: 10px;
-        border-radius: 4px; border: 1px solid #444; background-color: #333; color: #fff;
-    }
-    textarea { min-height: 100px; }
-    button {
-        padding: 10px 15px; background-color: #00ffcc; color: #111;
-        border: none; border-radius: 4px; cursor: pointer; font-weight: bold;
-    }
-    button:hover { background-color: #00e6b2; }
-    .cancel-edit-materi { background-color: #777; color: #fff; margin-left:10px; text-decoration:none; padding: 10px 15px; border-radius:4px; }
-    .cancel-edit-materi:hover { background-color: #555; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; color: #ccc; font-size:0.9em; }
-    table th, table td { border: 1px solid #444; padding: 8px; text-align: left; }
-    table th { background-color: #333; color: #00ffcc; }
-    table td a { color: #00ffcc; text-decoration: none; margin-right: 8px; }
-    table td a:hover { text-decoration: underline; }
-    .pesan { padding: 10px; border-radius: 5px; margin-bottom: 15px; text-align:center; }
-    .pesan.sukses { background-color: #28a74533; color: #a3ffb8; border: 1px solid #28a74588; }
-    .pesan.error { background-color: #dc354533; color: #ffacb3; border: 1px solid #dc354588; }
+  <style><body class="kelola_member">
   </style>
 </head>
 <body>

@@ -69,6 +69,11 @@ $hasil_verifikasi = mysqli_query($conn, $query_verifikasi);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Verifikasi Pembayaran - Admin ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/admin.css" />
   <style>
     .table-container { overflow-x: auto; }

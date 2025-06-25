@@ -5,12 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artikel</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
   <nav class="navbar">
-    <img src="../assets/images/logo.png" alt="Logo" class="logo">
+    <img src="../assets/images/logo-light.png" alt="Logo" class="logo">
     <ul class="nav-links">
       <li><a href="../guest/index.php" class="active">Beranda</a></li>
       <li><a href="../pages/artikel.html">Artikel</a></li>

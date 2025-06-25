@@ -7,11 +7,16 @@ session_start();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ngeWIP ArtClass - Beranda</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <nav class="navbar">
-    <img src="../assets/images/logo.png" alt="Logo" class="logo" />
+    <img src="../assets/images/logo-dark.png" alt="Logo" class="logo" id="logoTheme" />
     <div class="nav-toggle" id="navToggle">&#9776;</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.php" class="active">Beranda</a></li>
@@ -45,7 +50,7 @@ session_start();
          <a href="login.php" class="btn">Mulai Belajar/login</a>
       <?php endif; ?>
     </div>
-    <img src="../assets/images/hero-drawing.png" alt="Hero" class="hero-img" />
+    <img src="../assets/images/logo.png" alt="logo" class="hero-img" />
     <button id="modeToggle" style="position: fixed; top: 10px; right: 10px; z-index: 200;">☀️/🌙</button>
 
   </header>

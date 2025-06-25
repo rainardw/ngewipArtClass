@@ -21,6 +21,11 @@ if ($hasil_biaya_kursus && mysqli_num_rows($hasil_biaya_kursus) > 0) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biaya Kursus - ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../assets/css/style.css"> <style>
     /* Gaya dari biaya.html bisa dipertahankan atau disesuaikan */
     body { background-color: #111; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
@@ -117,6 +122,6 @@ if ($hasil_biaya_kursus && mysqli_num_rows($hasil_biaya_kursus) > 0) {
   <footer>
     <p>&copy; <?= date("Y") ?> ngeWIP ArtClass. All rights reserved.</p>
   </footer>
-  <script src="../assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>

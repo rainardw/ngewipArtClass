@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Toggle menu untuk mobile
+  // 🔄 Toggle menu mobile
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
 
@@ -9,35 +9,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🌗 Toggle Siang/Malam Mode
+  // 🌞🌚 Toggle Mode — PAKAI <html> bukan <body>
   const modeToggle = document.getElementById("modeToggle");
+  const html = document.documentElement;
+
+  const applyTheme = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+      html.classList.add("light-mode");
+    } else {
+      html.classList.remove("light-mode");
+    }
+  };
+
+  applyTheme(); // apply saat load
 
   if (modeToggle) {
     modeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-      const isLight = document.body.classList.contains("light-mode");
+      const isLight = html.classList.toggle("light-mode");
       localStorage.setItem("theme", isLight ? "light" : "dark");
     });
-
-    // Cek preferensi tema saat halaman dimuat
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-      document.body.classList.add("light-mode");
-    }
   }
 
-  // Filter harga program (khusus halaman program.php)
-  const kelasFilterSelect = document.getElementById("kelas-filter"); // ID dari select di program.php
+  // 🎯 Filter program (khusus program.php)
+  const kelasFilterSelect = document.getElementById("kelas-filter");
   if (kelasFilterSelect) {
     const updateTampilanHargaProgram = () => {
       const jenisKelasFilter = kelasFilterSelect.value;
-      const semuaKartuKursus = document.querySelectorAll(".program-card");
+      const semuaKartu = document.querySelectorAll(".program-card");
 
-      semuaKartuKursus.forEach(kartu => {
-        const tipeKartu = kartu.getAttribute("data-tipe"); // asumsikan ada data-tipe misal "online" / "offline"
-        if (jenisKelasFilter === "semua" || !tipeKartu) {
+      semuaKartu.forEach(kartu => {
+        const tipe = kartu.getAttribute("data-tipe");
+        if (jenisKelasFilter === "semua" || !tipe) {
           kartu.style.display = "";
-        } else if (tipeKartu.includes(jenisKelasFilter)) {
+        } else if (tipe.includes(jenisKelasFilter)) {
           kartu.style.display = "";
         } else {
           kartu.style.display = "none";
@@ -46,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     kelasFilterSelect.addEventListener("change", updateTampilanHargaProgram);
-    updateTampilanHargaProgram(); // Panggil sekali saat awal load
+    updateTampilanHargaProgram();
   }
 });

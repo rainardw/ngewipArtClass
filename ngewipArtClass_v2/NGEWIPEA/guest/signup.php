@@ -57,18 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daftar Akun - ngeWIP ArtClass</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <style>
-    body { background: #121212; color: #eee; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px 0; }
-    .signup-box { background: #1c1c1c; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px #00ffccaa; width: 100%; max-width: 380px; text-align: center; }
-    .signup-box h2 { color: #00ffcc; margin-bottom: 25px; }
-    .signup-box input { width: calc(100% - 24px); padding: 12px; margin: 10px 0; border-radius: 6px; font-size: 16px; border: 1px solid #333; background-color: #2b2b2b; color: #eee; }
-    .signup-box input::placeholder { color: #888; }
-    .signup-box button { width: 100%; padding: 12px; margin: 20px 0 10px; border-radius: 6px; font-size: 16px; border: none; background: #00ffcc; color: #121212; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }
-    .signup-box button:hover { background: #00e6b2; }
-    .form-message { font-weight: bold; margin-bottom: 15px; padding: 10px; border-radius: 6px; display: block; }
-    .form-message.error { color: #ff6666; background-color: rgba(255, 102, 102, 0.1); }
-    .login-link { color:#ccc; display:block; margin-top:15px; text-decoration:none; font-size: 0.9em; }
-    .login-link:hover { color: #00ffcc; }
+  <style><body class="signup-page">
   </style>
 </head>
 <body>

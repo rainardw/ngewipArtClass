@@ -144,6 +144,11 @@ if ($result_mentors) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kelola Kursus - Admin ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/admin.css" />
   <style>
     .form-container { background-color: #2b2b2b; padding: 20px; border-radius: 8px; margin-bottom: 30px; }

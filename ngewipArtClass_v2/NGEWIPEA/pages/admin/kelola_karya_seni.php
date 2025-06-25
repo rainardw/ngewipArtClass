@@ -60,6 +60,11 @@ if ($hasil_karya_all) {
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kelola Karya Seni - Admin ngeWIP ArtClass</title>
+  <script>
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light-mode");
+  }
+</script>
   <link rel="stylesheet" href="../../assets/css/admin.css" />
   <style>
     /* Style mirip galeri */
@@ -150,6 +155,6 @@ if ($hasil_karya_all) {
             tutupModalGambarAdmin();
         }
     }
-</script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
